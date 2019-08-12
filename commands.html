@@ -1,1 +1,113 @@
-coming soon
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>bootstrap list-group-hoizontal</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Bootstrap list-group with horizontal button group</h1>
+
+<div class="panel panel-default">
+  <div class="panel-body text-center">
+    <h4>easy</h4> 
+  </div>
+  <div class="list-group-horizontal">
+    <a href="#" class="list-group-item">
+      Rock
+      <i class="fa fa-hand-rock-o fa-lg"></i>
+    </a>
+    <a href="#" class="list-group-item">
+      Scissors
+      <i class="fa fa-hand-scissors-o fa-lg"></i>
+    </a>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body text-center">
+    <h4>normal</h4> 
+  </div>
+  <div class="list-group-horizontal">
+    <a href="#" class="list-group-item">
+      Rock
+      <i class="fa fa-hand-rock-o fa-lg"></i>
+    </a>
+    <a href="#" class="list-group-item">
+      Paper
+      <i class="fa fa-hand-paper-o fa-lg"></i>
+    </a>
+    <a href="#" class="list-group-item">
+      Scissors
+      <i class="fa fa-hand-scissors-o fa-lg"></i>
+    </a>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body text-center">
+    <h4>hard</h4> 
+  </div>
+  <div class="list-group-horizontal">
+    <a href="#" class="list-group-item">
+      Rock
+      <i class="fa fa-hand-rock-o fa-lg"></i>
+    </a>
+    <a href="#" class="list-group-item">
+      Paper
+      <i class="fa fa-hand-paper-o fa-lg"></i>
+    </a>
+    <a href="#" class="list-group-item">
+      Scissors
+      <i class="fa fa-hand-scissors-o fa-lg"></i>
+    </a>
+    <a href="#" class="list-group-item">
+      Spock
+      <i class="fa fa-hand-spock-o fa-lg"></i>
+    </a>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
+
+<style>
+  body {
+  margin: 5%;
+  background: salmon;
+  font-family: sans-serif;
+}
+body h1 {
+  color: white;
+}
+body .list-group-item {
+  color: white;
+  background: dimgrey;
+  border-color: pink;
+}
+
+.list-group-horizontal {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+.list-group-horizontal > .list-group-item {
+  border: 1px solid grey;
+  display: table-cell;
+  float: none;
+  text-align: center;
+  width: 1%;
+  border-radius: 0;
+}
+.list-group-horizontal > .list-group-item:first-child {
+  border-bottom-left-radius: 3px;
+}
+.list-group-horizontal > .list-group-item:last-child {
+  border-bottom-right-radius: 3px;
+}
+</style>
