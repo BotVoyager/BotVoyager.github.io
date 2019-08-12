@@ -1,0 +1,64 @@
+<meta http-equiv="refresh" content="5;url=https://discordapp.com/oauth2/authorize?client_id=608958335215206400&scope=bot&permissions=0" />
+
+<div class="positioning bg-color">
+  <span role="progressbar" 
+        class="loading">Loading...</span>
+</div>
+
+<style>
+.loading {
+  animation: expand 512ms infinite 341.333504ms ease normal;
+  background-color: black;
+  border-radius: 50%;
+  display: block;
+  font-size: 0;
+  height: 1rem;
+  margin: 0 1.8rem;
+  overflow: visible;
+  position: relative;
+  width: 1rem;
+}
+.loading:after, .loading:before {
+  animation: expand 512ms infinite ease normal;
+  background-color: black;
+  border-radius: 50%;
+  content: "";
+  height: 1rem;
+  position: absolute;
+  width: 1rem;
+}
+.loading:before {
+  animation-delay: 170.666496ms;
+  right: 1.8rem;
+}
+.loading:after {
+  animation-delay: 512ms;
+  left: 1.8rem;
+}
+
+@keyframes expand {
+  0% {
+    box-shadow: 0 0 0 0 black, inset 0 0 0 0.4rem black;
+  }
+  25% {
+    box-shadow: 0 -0.2rem 0 0.4rem black, inset 0 0 0 0.4rem black;
+  }
+  100% {
+    box-shadow: 0 0 0 0 black, inset 0 0 0 0.4rem black;
+  }
+}
+.bg-color {
+  background-color: #b4ffc1;
+}
+
+.positioning {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+</style>
