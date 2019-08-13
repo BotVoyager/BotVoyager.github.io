@@ -5,6 +5,15 @@
         class="loading">Loading...</span>
 </div>
 
+<div id="hide" style="visibility: hidden">CONTENT OF DIV GOES HERE</div> 
+
+<script>
+function showIt() {  
+  document.getElementById("hide").style.visibility = "visible";  
+}  
+setTimeout("showIt()", 2000);
+</script>
+
 <style>
 .loading {
   animation: expand 512ms infinite 341.333504ms ease normal;
