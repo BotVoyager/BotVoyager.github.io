@@ -1,67 +1,49 @@
-<div class="container">
-    <p id="timer">
-        <span id="timer-days"></span>
-        <span id="timer-hours"></span>
-        <span id="timer-mins"></span>
-        <span id="timer-secs"></span>
-    </p>
-</div>
-
-<script>
-var endDate = new Date("Aug 22, 2019 4:00:00").getTime();
-
-var timer = setInterval(function() {
-
-    let now = newDate().getTime();
-    let t = endDate - now;
-    
-    if (t >= 0) {
-    
-        let days = Math.floor(t / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-        let secs = Math.floor((t % (1000 * 60)) / 1000);
-    
-        document.getElementById("timer-days").innerHTML = days +
-        "<span class='label'>DAY(S)</span>";
-    
-        document.getElementById("timer-hours").innerHTML = ("0"+hours).slice(-2) +
-        "<span class='label'>HR(S)</span>";
-    
-        document.getElementById("timer-mins").innerHTML = ("0"+mins).slice(-2) +
-        "<span class='label'>MIN(S)</span>";
-    
-        document.getElementById("timer-secs").innerHTML = ("0"+secs).slice(-2) +
-        "<span class='label'>SEC(S)</span>";
-    
-    } else {
-
-        document.getElementById("timer").innerHTML = "The countdown is over!";
-    
-    }
-    
-}, 1000);
-</script>
-
 <style>
-body {
-    margin: 0;
-    padding: 0;
-}
 .container {
-    background: #222;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+background: #222;
+width: auto;
+height: 10vh;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius:7px;
 }
+
 #timer {
-    color: #fff;
-    font-size: 4rem;
+color: #fff;
+font-size: 4rem;
+text-align:center;
 }
-.label {
-    font-size: 2.5rem;
-    padding-left: 0.25rem;
+
+#remainder{
+font-size: 2.5rem;
+padding-left: 0.25rem;
+display:inline-block;
+}
+
+@media screen and (max-width: 780px) {
+#timer .label{
+font-size:1.5rem;
+}
 }
 </style>
+<div class="container" id="timer">
+
+</div>
+<script>
+var endDate = new Date("Aug 22, 2019 4:00:00").getTime();
+var timer = setInterval(function () {
+let now = new Date().getTime();
+let t = endDate - now;
+if (t >= 0) {
+document.getElementById("remainder").innerHTML = 
+Math.floor(t / (1000 * 60 * 60 * 24)) + "DAY(S) " + 
+("0" + Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).slice(-2) + "HR(S) " + 
+("0" + Math.floor((t % (1000 * 60 * 60)) / (1000 * 60))).slice(-2) + "MIN(S) " +
+("0" + Math.floor((t % (1000 * 60)) / 1000)).slice(-2) + "SEC(S)";
+} else {
+document.getElementById("remainder").innerHTML = "End of timer.";
+}
+
+}, 1000);
+</script>
